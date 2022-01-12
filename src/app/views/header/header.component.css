@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-image: url("/assets/img/Background-cabeçalho.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container-grid {
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-left: 100px;
+position: relative;
+}
+
+.container-grid form {
+  display: flex;
+}
+.form input {
+  font-size: 20px;
+  width: 100px;
+}
+.form button {
+  font-size: 20px;
+}
+
+.Logo {
+  width: 400px;
+}
+
+.menu {
+font-size: 20px;
+width: 351px;
+display: flex;
+justify-content: space-between;
+}
+
+.menu a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'roboto';
+}
+
+.barras-cabecalho {
+  display: none;
+  width: 50px;
+  color: darkgrey;
+}
+
+.barras-cabecalho img {
+  width: 50px;
+}
+
+.menu a:after{
+  content: '';
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  display: block;
+  transition: .5s ease-in-out;
+}
+.menu a:hover::after{
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  display: block;
+
+}

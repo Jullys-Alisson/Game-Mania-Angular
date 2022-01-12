@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+} */
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {max-width: 100%;}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+body{
+    font-family: Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+/* HEADER */
+.header{
+    padding-top: 10px;
+    display: flex;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.205);
+    margin-bottom: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.header_logo{
+    width: 150px;
+    padding: 10px;
+}
+
+.header_main{
+    width: 100%;
+    padding-right: 10px;
+}
+
+.header_inf{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.header_inf_links{
+    padding: 0;
+    padding-top: 10px;
+    display: flex;
+}
+
+.header_inf_profile{
+    display: flex;
+}
+.header_inf_profile a{
+    padding-top: 10px;
+
+}
+
+.header_inf a{
+    color: #b80000;
+    margin: 0 15px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 600;
+}
+.header_profile{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #b80000;
+    background-image: url(https://i.imgur.com/aNkAuOD.jpg);
+    background-size: cover;
+}
+
+
+.header_search{
+    width: 100%;
+    display: block;
+}
+
+.header_search input{
+    display: block;
+    border-radius: 5px;
+    border: 2px solid #b80000;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 9px;
+    padding-left: 20px;
+}
+
+.page_games{
+    display: flex;
+}
+
+/* block */
+.block{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    width: 1000px;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.205);
+    border-radius: 10px;
+}
+
+/* page_games */
+.catalog-games{
+    margin-left: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.205);
+    border-radius: 10px;
+}
+
+
+
+.game:hover .game_img img{
+    opacity: 0.5;
+}
+
+.game:hover{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.game:hover .price{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.game:hover .name_game h2{
+    visibility: visible;
+}
+
+.game_img img{
+    transition: opacity 0.5s linear;
+}
+
+.game_img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.game_img h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 55%;
+
+    text-shadow: 4px 5px 6px rgb(0, 0, 0);
+
+    color: white;
+    font-size: 20px;
+
+    visibility: hidden;
+}
+
+.game{
+    display: inline-block;
+    margin: 29.8px;
+    width: 230px;
+    height: 285px;
+    background-color: #b800007e;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.205);
+    border-radius: 10px 10px 0 0;
+}
+
+.game a{
+    text-decoration: none;
+}
+
+.game img{
+    display: flex;
+    border-radius: 10px 10px 0 0;
+}
+
+.price{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.205);
+    display: flex;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+
+}
+
+.money{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+.sale{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(185, 90, 90);
+}
+
+
+/* button */
+.button{
+    padding-top: 50px;
+}
+
+.catalog-btn{
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    width: 90%;
+    padding: 14px 18px;
+    border: 1px solid #d9d9d9;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.catalog-filter{
+    padding: 20px;
+}
+
+.catalog-filter p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #b80000;
+}
+
+.filter p{
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    padding-right: 9px;
+}
+
+.filter-checkbox {
+    padding-left: 10px;
+    display: flex;
+}
+
+.filter{
+    border-radius: 10px;
+    margin-bottom: 14px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.205);
+}
+
+.filter-checkbox p{
+    color: black;
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.footer{
+    margin-bottom: 20px;
+    margin-top: 40px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.205);
+}
+
+.footer p{
+    padding-left: 10px;
+}
+
+.prava{
+    padding: 10px 0px 0px 10px;
+}
+
+.prava p{
+    font-size: 16;
+    text-align: center;
+}
+
+.pay-systems{
+    display: block;
+    padding-left: 20px;
+    text-align: center;
+}
