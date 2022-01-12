@@ -1,7 +1,8 @@
+<form #loginForm="ngForm" (ngSubmit)="onSubmit()">
 <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Logar</label>
-		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Deslogar</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" [(ngModel)]="loginModel.email">Deslogar</label>
 		<div class="login-form">
 			<div class="sign-in-htm">
 				<div class="group">
@@ -10,7 +11,7 @@
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Senha</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass" type="password" class="input" data-type="password"[(ngModel)]="loginModel.password">
 				</div>
 				<div class="group">
 					<input id="check" type="checkbox" class="check" checked>
@@ -52,3 +53,4 @@
 		</div>
 	</div>
 </div>
+</form>

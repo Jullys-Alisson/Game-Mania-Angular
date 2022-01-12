@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LojaComponent } from './views/loja/loja.component';
 import { CarrinhoComponent } from './views/carrinho/carrinho.component';
 import { LoginComponent } from './views/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,13 @@ import { LoginComponent } from './views/login/login.component';
     FooterComponent,
     LojaComponent,
     CarrinhoComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
