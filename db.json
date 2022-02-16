@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "email": "jullys@mail.com",
+      "password": "$2a$10$Ru15SxyC3Prm7zdWb3VqLeUlVI6r4GwN2UcEgLfJrdWAp66UM9FAS",
+      "nome": "Jullys",
+      "id": "1"
+    },
+    {
+      "email": "jullys10@mail.com",
+      "password": "$2a$10$UkhdVaxvrkmCZpxoCybtv.rsR.ajPowEh7FCf9dFVFfz.4bS58uzS",
+      "nome": "Jullys",
+      "id": "2"
+    }
+  ],
+  "Noticias": [
+    {
+      "id": 1,
+      "imagem": "assets/img/photo-news.jpg",
+      "titulo": "Prêmio TGA",
+      "descricao": "Saiba tudo "
+    },
+    {
+      "id": 2,
+      "imagem": "assets/img/photo-news.jpg",
+      "titulo": "Campeonato LOL",
+      "descricao": "veja os resultados"
+    },
+    {
+      "id": 3,
+      "imagem": "assets/img/photo-news.jpg",
+      "titulo": "Preços subindo",
+      "descricao": "Preços de hardware"
+    },
+    {
+      "id": 4,
+      "imagem": "assets/img/photo-news.jpg",
+      "titulo": "Microsoft + Blizzard",
+      "descricao": "Saiba tudo "
+    },
+    {
+      "id": 5,
+      "imagem": "assets/img/photo-news.jpg",
+      "titulo": "Flamengo é campeão",
+      "descricao": "Veja os jogos "
+    },
+    {
+      "imagem": "assets/img/photo-news.jpg",
+      "titulo": "Microsoft - Blizzard",
+      "descricao": "Saiba mais",
+      "id": 6
+    }
+  ]
+}

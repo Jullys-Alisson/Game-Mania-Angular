@@ -368,6 +368,7 @@ header {
 }
 
 .noticias header {
+  background-color: blue black var(--gradient);
   font-size: 60px;
   font-weight: 700;
   line-height: 0,5;
@@ -387,24 +388,32 @@ header {
   font-size: 50px;
   color: white;
 }
-.card-not {
+/* .card-not {
   width: 300px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+} */
 
 .content-news {
+  height: 100%;
   display: flex;
-  text-align: left;
-  justify-content: space-around;
+  font-size: 30px;
+  text-align: center;
   color: white;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.content-news h3 {
+.card_news {
+  margin: 5%;
+}
+
+.h3 {
   display: flex;
   font-size: 30px;
   text-align: left;
+  color: white;
 }
 
 .galeria {

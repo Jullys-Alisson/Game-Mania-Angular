@@ -12,6 +12,7 @@ import { LojaComponent } from './views/loja/loja.component';
 import { CarrinhoComponent } from './views/carrinho/carrinho.component';
 import { LoginComponent } from './views/login/login.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

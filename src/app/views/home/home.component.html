@@ -1,4 +1,4 @@
- <!-- SEÇÃO - MENU -->
+<!-- SEÇÃO - MENU -->
 
 <section class="plataformas">
   <nav id="plataformas_logo" class="logos_plataformas">
@@ -78,26 +78,31 @@
 <section class="atendimento_service">
   <nav id="link-servicos">
     <div class="servicos">
-    <a class="atendimento" href="">atendimento </a>
-    <a class="pagamentos" href=""> pagamentos </a>
-    <a class="entrega" href="">entrega</a>
-  </div>
+      <a class="atendimento" href="">atendimento </a>
+      <a class="pagamentos" href=""> pagamentos </a>
+      <a class="entrega" href="">entrega</a>
+    </div>
   </nav>
 </section>
 
 <!-- SEÇÃO DESTAQUES -->
 <section class="promocoes">
   <header>Promoções</header>
-    <nav id="menu" class="menu-a">
-      <div class="menu-flex">
-      <a class="fhorizon" href="#"><img src="/assets/img/Forza Horizon New.jpg" width="350" alt="imagem forza horizon"> Forza Horizon </a>
-      <a class="god-of-war" href="#"><img src="/assets/img/God-of-War-Ragnarok-new.jpg" width="350" alt="imagem god of war"> God of War </a>
-      <a class="codvanguard" href="#"><img src="/assets/img/Vanguard new.jpg" width="350" alt="imagem call of duty"> Call of Duty</a>
-      <a class="newworld" href="#"><img src="/assets/img/New World New.jpg" width="350" alt="imagem new world"> New World</a>
-      <a class="chronocross" href="#"><img src="/assets/img/Chrono Cross New.jpg" width="350" alt="imagem chrono cross"> Chrono Cross</a>
+  <nav id="menu" class="menu-a">
+    <div class="menu-flex">
+      <a class="fhorizon" href="#"><img src="/assets/img/Forza Horizon New.jpg" width="350" alt="imagem forza horizon">
+        Forza Horizon </a>
+      <a class="god-of-war" href="#"><img src="/assets/img/God-of-War-Ragnarok-new.jpg" width="350"
+          alt="imagem god of war"> God of War </a>
+      <a class="codvanguard" href="#"><img src="/assets/img/Vanguard new.jpg" width="350" alt="imagem call of duty">
+        Call of Duty</a>
+      <a class="newworld" href="#"><img src="/assets/img/New World New.jpg" width="350" alt="imagem new world"> New
+        World</a>
+      <a class="chronocross" href="#"><img src="/assets/img/Chrono Cross New.jpg" width="350" alt="imagem chrono cross">
+        Chrono Cross</a>
       <a class="valo" href="#"><img src="/assets/img/Valorant New.jpg" width="350" alt="imagem valorant"> Valorant </a>
     </div>
-    </nav>
+  </nav>
 </section>
 
 <!-- SEÇÃO NOVIDADES -->
@@ -107,7 +112,12 @@
     <div class="bloco-de-noticias">
       <h2>Hoje</h2>
       <div id="espaco-noticias" class="content-news">
-        <div class="card_news">
+        <div *ngFor="let noticias of listaNoticias " class="card_news">
+          <img [src]=noticias.imagem width="300" alt="imagem">
+          <h3>{{noticias.titulo}}</h3>
+          <p> {{noticias.descricao}} </p>
+        </div>
+        <!-- <div class="card_news">
           <img class="seila2" src="/assets/img/photo-news.jpg" width="300px" alt="imagem-News...">
           <h3>Titulo-da-noticia</h3>
           <p>Lorem ipsum dolor sit amet. Et eligendi voluptates ut eveniet aperiam ut error tempore et temporibus
@@ -124,7 +134,7 @@
           <h3>Titulo-da-noticia</h3>
           <p>Lorem ipsum dolor sit amet. Et eligendi voluptates ut eveniet aperiam ut error tempore et temporibus
             porro in quas deserunt et exercitationem harum sed dignissimos earum. </p>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -133,18 +143,22 @@
 <!-- SEÇÃO GALERIA -->
 <section class="galeria">
   <header>GALERIA</header>
-    <nav id="m_galeria" class="galeria-a">
-      <div class="menu_flex">
-      <a class="tgs1" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350" alt="imagem tgs"> Imagem TGS </a>
-      <a class="tgs2" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350" alt="imagem tgs"> Imagem TGS </a>
-      <a class="tgs3" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350" alt="imagem tgs"> Imagem TGS</a>
-      <a class="tgs4" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350" alt="imagem tgs"> Imagem TGS</a>
-      <a class="tgs5" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350" alt="imagem tgs"> Imagem TGS</a>
-      <a class="tgs6" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350" alt="imagem tgs"> Imagem TGS </a>
+  <nav id="m_galeria" class="galeria-a">
+    <div class="menu_flex">
+      <a class="tgs1" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350"
+          alt="imagem tgs"> Imagem TGS </a>
+      <a class="tgs2" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350"
+          alt="imagem tgs"> Imagem TGS </a>
+      <a class="tgs3" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350"
+          alt="imagem tgs"> Imagem TGS</a>
+      <a class="tgs4" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350"
+          alt="imagem tgs"> Imagem TGS</a>
+      <a class="tgs5" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350"
+          alt="imagem tgs"> Imagem TGS</a>
+      <a class="tgs6" href="#"><img src="/assets/img/tgs 2018 afp file photo-1567684084.jpg" width="350"
+          alt="imagem tgs"> Imagem TGS </a>
     </div>
-    </nav>
+  </nav>
 </section>
 
 <!-- header e footer estão em app.component.html -->
-
-
