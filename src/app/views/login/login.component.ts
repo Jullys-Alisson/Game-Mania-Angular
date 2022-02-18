@@ -19,7 +19,21 @@ export class LoginComponent implements OnInit {
   mensagem = ""
 
   onSubmit () {
+
     console.log(this.loginModel)
+
+    let erroEncontrado = 0
+
+    const blackLista: string[] = ["select ", "from ","drop ","or ","having ","group ","insert ","exec ","\"","\'","--","#","*",";"]
+
+    blackLista.forEach(palavra => {
+      if(this.loginModel.email?.toLowerCase().includes(palavra)) {
+        this.mensagem = "Dados inválidos" + palavra;
+        erroEncontrado = 1
+      }
+    })
+
+    if (erroEncontrado == 0) {
     this.loginService.login(this.loginModel).subscribe((response) => {
       console.log("sucesso")
       this.mensagem = "Sucesso!"
@@ -27,5 +41,6 @@ export class LoginComponent implements OnInit {
      this.mensagem = erro.error
      console.log("Sem sucesso")
     })
+  }
   }
 }

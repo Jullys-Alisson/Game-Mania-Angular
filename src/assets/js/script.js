@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
     // let slide_atual = 0
-   
+
     // let lista_slides = ["banner-halo", "banner-lol", "banner-eldenring"]
-    
+
     // setInterval(slide, 2000)
-        
+
 
     // function slide() {
 
@@ -55,7 +55,7 @@ function cadastroemail() {
     let emaildigitado = document.getElementById("campo-email").value;
         console.log(emaildigitado);
 }
-            // criando objeto 
+            // criando objeto
 function renderizarNoticias() {
     let espaco = document.getElementById("espaco-noticias")
 
@@ -78,7 +78,7 @@ function renderizarNoticias() {
     ]
 
     template = "";
-    
+
     for (let index = 0; index < listaNoticias.length; index++) {
         const noticia = listaNoticias[index];
         console.log(noticia)
